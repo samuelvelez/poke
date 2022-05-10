@@ -4,7 +4,6 @@ import { useRouter } from "next/router"
 
 const pokemon = ({data}) => {
     const router = useRouter()
-    console.log(router)
     if(router.isFallback){
         return(
             <p>Cargando...</p>
