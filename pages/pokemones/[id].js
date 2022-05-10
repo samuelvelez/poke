@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-const pokemon = ({data}) => {
+const Pokemon = ({data}) => {
     const router = useRouter()
     if(router.isFallback){
         return(
@@ -18,7 +18,7 @@ const pokemon = ({data}) => {
     )
 }
 
-export default pokemon
+export default Pokemon
 
 export const getStaticProps = async ({params}) => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`)
